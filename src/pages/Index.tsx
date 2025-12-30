@@ -1,4 +1,4 @@
-import Navbar from "@/components/layout/Navbar";
+import BlankNavbar from "@/components/layout/BlankNavbar";
 import Hero from "@/components/sections/Hero";
 import Companies from "@/components/sections/Companies";
 import CustomerStories from "@/components/sections/CustomerStories";
@@ -13,7 +13,7 @@ import Footer from "@/components/sections/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      <BlankNavbar />
       <main id="main-content">
         <Hero />
         <Companies />
