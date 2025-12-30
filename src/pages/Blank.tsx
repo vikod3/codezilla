@@ -33,8 +33,8 @@ const Blank = () => {
       {/* Video Background */}
       <video
         ref={videoRef}
-        className="absolute inset-0 w-[140%] h-[140%] object-cover object-bottom-left z-0 -scale-x-100 -scale-y-100"
-        style={{ objectPosition: 'bottom left' }}
+        className="absolute inset-0 w-[140%] h-[140%] object-cover z-0 -scale-x-100 -scale-y-100"
+        style={{ objectPosition: 'top right' }}
         autoPlay
         loop
         muted
