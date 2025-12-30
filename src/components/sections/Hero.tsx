@@ -1,11 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import Hls from "hls.js";
-import { PrimaryButton } from "@/components/ui/primary-button";
-import { Sparkles } from "lucide-react";
-import { TypingEffect } from "@/components/ui/typing-effect";
-import { TextFade } from "@/components/ui/text-fade";
 
-const VIDEO_URL = "https://customer-cbeadsgr09pnsezs.cloudflarestream.com/c028dfe62a2d176088358f42c3061d3e/manifest/video.m3u8";
+const VIDEO_URL =
+  "https://customer-cbeadsgr09pnsezs.cloudflarestream.com/257c7359efd4b4aaebcc03aa8fc78a36/manifest/video.m3u8";
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -36,7 +33,7 @@ const Hero = () => {
   // Initialize video when loaded flag is set
   useEffect(() => {
     if (!isVideoLoaded) return;
-    
+
     const video = videoRef.current;
     if (!video) return;
 
@@ -58,15 +55,16 @@ const Hero = () => {
   }, [isVideoLoaded]);
 
   return (
-    <section 
+    <section
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center px-4 pt-40 lg:pt-48 pb-16 lg:pb-20 overflow-hidden"
+      className="relative min-h-screen overflow-hidden"
     >
       {/* Video Background - lazy loaded */}
       {isVideoLoaded && (
         <video
           ref={videoRef}
-          className="absolute inset-0 w-full h-full object-cover z-0 scale-[2.5]"
+          className="absolute inset-0 w-[140%] h-[140%] object-cover z-0 -scale-x-100 -scale-y-100"
+          style={{ objectPosition: "top right" }}
           autoPlay
           loop
           muted
@@ -74,39 +72,74 @@ const Hero = () => {
           preload="none"
         />
       )}
-      {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-background/50 z-10" />
-      {/* Bottom fade gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent z-10" />
 
-      <div className="relative z-20 max-w-[888px] w-full flex flex-col items-center gap-10">
-        {/* Badge */}
-        <div className="pl-1 pr-3 sm:pr-4 py-1 rounded-2xl border border-white/20 inline-flex items-center gap-2 sm:gap-4 bg-background/30 backdrop-blur-sm">
-          <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 rounded-xl inline-flex items-center gap-1.5 sm:gap-2">
-            <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-muted-foreground" />
-            <span className="text-muted-foreground text-xs sm:text-sm font-medium leading-5 sm:leading-6">
-              New Update
+      {/* Liquid Glass Overlay */}
+      <div className="absolute inset-0 z-[5] flex">
+        {Array.from({ length: 14 }).map((_, i) => (
+          <div
+            key={i}
+            className="flex-1 h-full bg-blend-overlay bg-gradient-to-l from-white/0 via-black/20 to-white/0 backdrop-blur-[53.82px]"
+          />
+        ))}
+      </div>
+
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-background/60 z-10" />
+
+      <div className="relative z-20 px-6 md:px-12 lg:px-20 pt-32 md:pt-40 pb-16 md:pb-24">
+        {/* Card on the left */}
+        <div className="w-80 h-64 relative bg-background/70 rounded-[20px] border border-foreground/20 backdrop-blur-lg overflow-hidden mb-16 md:mb-24">
+          <div className="px-2 py-1 absolute left-4 top-4">
+            <span className="opacity-70 text-foreground text-sm font-normal uppercase leading-6">
+              [ 2025 ]
             </span>
           </div>
-          <TypingEffect 
-            text="Introducing v3 — Try It" 
-            className="text-muted-foreground text-xs sm:text-sm font-medium leading-4 sm:leading-5"
-          />
+          <div className="w-60 absolute left-4 top-[68px] flex flex-col gap-3">
+            <h3 className="text-foreground text-3xl leading-10 flex flex-col">
+              <span className="whitespace-nowrap">
+                <span className="font-semibold">Taught by </span>
+                <span className="font-normal italic">Industry</span>
+              </span>
+              <span className="whitespace-nowrap font-semibold">
+                Professionals
+              </span>
+            </h3>
+            <p className="opacity-70 text-foreground text-sm font-normal leading-6">
+              Get mentorship and instruction from top tech software engineers.
+            </p>
+          </div>
         </div>
 
-        <TextFade direction="up" className="flex flex-col items-center gap-6 w-full">
-          <h1 className="max-w-[790px] text-center text-foreground text-4xl sm:text-5xl md:text-6xl lg:text-[67px] font-normal leading-tight lg:leading-[72px]">
-            The future beyond human intelligence
-          </h1>
-          <p className="max-w-[542px] opacity-70 text-center text-foreground text-base sm:text-lg md:text-xl font-normal leading-7 md:leading-8">
-            Harness the power of advanced AI to transform your workflow, automate complex tasks, and unlock new possibilities.
-          </p>
-        </TextFade>
+        {/* Main hero content */}
+        <div className="flex flex-col gap-6 max-w-3xl">
+          {/* Badge */}
+          <div className="px-3 py-1 rounded-full border border-foreground/40 inline-flex w-fit">
+            <span className="text-foreground text-sm font-medium leading-5">
+              Career-Ready Curriculum
+            </span>
+          </div>
 
-        {/* CTA Button */}
-        <PrimaryButton>
-          Get Started
-        </PrimaryButton>
+          {/* Heading */}
+          <h1 className="text-foreground text-4xl sm:text-6xl lg:text-8xl font-black uppercase leading-tight lg:leading-[88px] flex flex-col">
+            <span className="whitespace-nowrap">Launch Your</span>
+            <span className="whitespace-nowrap">
+              Coding Career<span className="text-indigo-400">.</span>
+            </span>
+          </h1>
+
+          {/* Description */}
+          <p className="opacity-90 text-foreground text-base sm:text-lg lg:text-xl font-normal leading-7 lg:leading-8 max-w-[499px]">
+            Master in-demand coding skills with hands-on projects, guided
+            lessons, and real-world mentorship.
+          </p>
+
+          {/* CTA Button */}
+          <button className="px-8 py-4 bg-foreground text-background rounded-full shadow-sm inline-flex justify-center items-center w-fit hover:bg-foreground/90 transition-colors">
+            <span className="text-base font-medium leading-6">
+              Start Building Wealth
+            </span>
+          </button>
+        </div>
       </div>
     </section>
   );
