@@ -39,6 +39,17 @@ const Blank = () => {
         muted
         playsInline
       />
+      
+      {/* Liquid Glass Overlay */}
+      <div className="absolute inset-0 z-[5] flex">
+        {Array.from({ length: 14 }).map((_, i) => (
+          <div
+            key={i}
+            className="flex-1 h-full bg-blend-overlay bg-gradient-to-l from-white/0 via-black/20 to-white/0 backdrop-blur-[53.82px]"
+          />
+        ))}
+      </div>
+      
       {/* Overlay for readability */}
       <div className="absolute inset-0 bg-background/60 z-10" />
       
