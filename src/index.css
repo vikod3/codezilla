@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+
+
+@layer base {
+  :root {
+    --background: 0 0% 4.3%; /* #0B0B0B */
+    --foreground: 0 0% 100%; /* #FFFFFF */
+
+    --card: 0 0% 5.5%; /* #0E0E0E */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 4.3%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 4.3%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 100%;
+    --border-opacity: 0.1;
+    --input: 0 0% 100%;
+    --ring: 0 0% 100%;
+
+    --radius: 0.75rem;
+
+    /* Navbar specific */
+    --navbar-gradient-from: 0 0% 100%;
+    --navbar-gradient-to: 0 0% 64%;
+
+    --sidebar-background: 0 0% 4.3%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 0 0% 4.3%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 100%;
+    --sidebar-ring: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border/10;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .border-subtle {
+    border-color: hsl(var(--border) / 0.1);
+  }
+  
+  .glass-card {
+    @apply bg-gradient-to-r from-white/10 to-neutral-400/10 backdrop-blur-lg border border-subtle;
+  }
+
+  .gradient-card {
+    @apply bg-gradient-to-b from-neutral-950/10 to-white/10 rounded-2xl border border-white/10;
+  }
+
+  .solution-grid-card {
+    background: linear-gradient(to bottom right, #0b0a0b 0%, #0F0F0F 40%, #2C2C2C 100%);
+    @apply rounded-xl border border-white/10;
+  }
+
+  .testimonial-card {
+    background: linear-gradient(to bottom, hsl(0 0% 4.3%) 0%, hsl(0 0% 4.3%) 70%, hsl(0 0% 100% / 0.08) 100%);
+    @apply rounded-2xl border border-white/10;
+  }
+
+  .solution-tab-active {
+    background: linear-gradient(to bottom, hsl(0 0% 4.3%) 0%, hsl(0 0% 100% / 0.08) 100%);
+  }
+
+  .accordion-item-open {
+    background: linear-gradient(to bottom, hsl(0 0% 4.3%) 0%, hsl(0 0% 100% / 0.08) 100%);
+    @apply border border-white/10 rounded-xl;
+  }
+
+  .accordion-item-closed {
+    @apply bg-neutral-400/10 rounded-xl;
+  }
+}
