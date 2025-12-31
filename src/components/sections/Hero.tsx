@@ -86,59 +86,41 @@ const Hero = () => {
       {/* Overlay for readability */}
       <div className="absolute inset-0 bg-background/60 z-10" />
 
-      <div className="relative z-20 px-6 md:px-12 lg:px-20 pt-32 md:pt-40 pb-16 md:pb-24">
-        {/* Card on the left */}
-        <div className="w-80 h-64 relative bg-background/70 rounded-[20px] border border-foreground/20 backdrop-blur-lg overflow-hidden mb-16 md:mb-24">
-          <div className="px-2 py-1 absolute left-4 top-4">
-            <span className="opacity-70 text-foreground text-sm font-normal uppercase leading-6">
-              [ 2025 ]
-            </span>
+      <div className="relative z-20 flex items-center justify-center min-h-screen px-6">
+        <div className="w-full max-w-[871px] inline-flex flex-col justify-start items-center gap-6">
+          {/* Badge */}
+          <div className="h-9 pl-[5px] pr-3.5 py-2 bg-slate-600/40 rounded-[10px] border border-violet-400/50 inline-flex justify-center items-center gap-2 overflow-hidden">
+            <div className="px-2 py-0.5 bg-orange-400 rounded-md flex justify-center items-center">
+              <span className="text-center text-foreground text-sm font-medium font-['Cabin'] leading-6">New</span>
+            </div>
+            <span className="text-center text-zinc-100 text-sm font-medium font-['Cabin'] leading-6">Say Hello to Datacore v3.2</span>
           </div>
-          <div className="w-60 absolute left-4 top-[68px] flex flex-col gap-3">
-            <h3 className="text-foreground text-3xl leading-10 flex flex-col">
-              <span className="whitespace-nowrap">
-                <span className="font-semibold">Taught by </span>
-                <span className="font-normal italic">Industry</span>
+
+          {/* Heading Section */}
+          <div className="flex flex-col justify-start items-center gap-2.5">
+            <h1 className="text-center">
+              <span className="text-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium font-['Inter'] leading-tight lg:leading-[87.40px]">
+                Your Finances.<br/>One Smart{" "}
               </span>
-              <span className="whitespace-nowrap font-semibold">
-                Professionals
+              <span className="text-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal italic font-serif leading-tight lg:leading-[87.40px]">
+                Dashboard
               </span>
-            </h3>
-            <p className="opacity-70 text-foreground text-sm font-normal leading-6">
-              Get mentorship and instruction from top tech software engineers.
+              <span className="text-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold font-['Inter'] leading-tight lg:leading-[87.40px]">.</span>
+            </h1>
+            <p className="w-full max-w-[613px] opacity-90 text-center text-slate-50 text-base sm:text-lg font-normal leading-6">
+              Taskora helps teams manage projects, tasks,<br className="hidden sm:block"/>and deadlines with clarity.
             </p>
           </div>
-        </div>
 
-        {/* Main hero content */}
-        <div className="flex flex-col gap-6 max-w-3xl">
-          {/* Badge */}
-          <div className="px-3 py-1 rounded-full border border-foreground/40 inline-flex w-fit">
-            <span className="text-foreground text-sm font-medium leading-5">
-              Career-Ready Curriculum
-            </span>
+          {/* CTA Buttons */}
+          <div className="inline-flex flex-col sm:flex-row justify-start items-center gap-4 sm:gap-5">
+            <button className="px-6 py-3.5 bg-violet-600 rounded-[10px] flex justify-center items-center gap-2 overflow-hidden hover:bg-violet-700 transition-colors">
+              <span className="text-foreground text-base font-medium font-['Cabin'] leading-7">Book a Free Demo</span>
+            </button>
+            <button className="px-6 py-3.5 bg-indigo-950 rounded-[10px] flex justify-center items-center gap-2 overflow-hidden hover:bg-indigo-900 transition-colors">
+              <span className="text-slate-50 text-base font-medium font-['Cabin'] leading-7">Get Started Now</span>
+            </button>
           </div>
-
-          {/* Heading */}
-          <h1 className="text-foreground text-4xl sm:text-6xl lg:text-8xl font-black uppercase leading-tight lg:leading-[88px] flex flex-col">
-            <span className="whitespace-nowrap">Launch Your</span>
-            <span className="whitespace-nowrap">
-              Coding Career<span className="text-indigo-400">.</span>
-            </span>
-          </h1>
-
-          {/* Description */}
-          <p className="opacity-90 text-foreground text-base sm:text-lg lg:text-xl font-normal leading-7 lg:leading-8 max-w-[499px]">
-            Master in-demand coding skills with hands-on projects, guided
-            lessons, and real-world mentorship.
-          </p>
-
-          {/* CTA Button */}
-          <button className="px-8 py-4 bg-foreground text-background rounded-full shadow-sm inline-flex justify-center items-center w-fit hover:bg-foreground/90 transition-colors">
-            <span className="text-base font-medium leading-6">
-              Start Building Wealth
-            </span>
-          </button>
         </div>
       </div>
     </section>
