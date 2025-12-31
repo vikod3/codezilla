@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-
+import logoNew from "@/assets/logo-new.png";
 const navLinks = [
   { label: "HOME", href: "/" },
   { label: "ABOUT", href: "/about" },
@@ -28,9 +28,9 @@ const BlankNavbar = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="text-foreground text-xl md:text-2xl font-bold leading-7"
+            className="flex items-center"
           >
-            LOGOIPSUM
+            <img src={logoNew} alt="Datacore" className="h-6 md:h-7" />
           </Link>
 
           {/* Desktop Navigation */}
