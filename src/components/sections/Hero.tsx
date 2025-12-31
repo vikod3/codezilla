@@ -91,9 +91,9 @@ const Hero = () => {
           {/* Badge */}
           <div className="h-9 pl-[5px] pr-3.5 py-2 bg-slate-600/40 rounded-[10px] border border-violet-400/50 inline-flex justify-center items-center gap-2 overflow-hidden">
             <div className="px-2 py-0.5 bg-orange-400 rounded-md flex justify-center items-center">
-              <span className="text-center text-foreground text-sm font-medium font-['Cabin'] leading-6">New</span>
+              <span className="text-center text-foreground text-sm font-medium font-['Inter'] leading-6">New</span>
             </div>
-            <span className="text-center text-zinc-100 text-sm font-medium font-['Cabin'] leading-6">Say Hello to Datacore v3.2</span>
+            <span className="text-center text-zinc-100 text-sm font-medium font-['Inter'] leading-6">Say Hello to Datacore v3.2</span>
           </div>
 
           {/* Heading Section */}
@@ -115,10 +115,10 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="inline-flex flex-col sm:flex-row justify-start items-center gap-4 sm:gap-5">
             <button className="px-6 py-3.5 bg-violet-600 rounded-[10px] flex justify-center items-center gap-2 overflow-hidden hover:bg-violet-700 transition-colors">
-              <span className="text-foreground text-base font-medium font-['Cabin'] leading-7">Book a Free Demo</span>
+              <span className="text-foreground text-base font-medium font-['Inter'] leading-7">Book a Free Demo</span>
             </button>
             <button className="px-6 py-3.5 bg-indigo-950 rounded-[10px] flex justify-center items-center gap-2 overflow-hidden hover:bg-indigo-900 transition-colors">
-              <span className="text-slate-50 text-base font-medium font-['Cabin'] leading-7">Get Started Now</span>
+              <span className="text-slate-50 text-base font-medium font-['Inter'] leading-7">Get Started Now</span>
             </button>
           </div>
         </div>
