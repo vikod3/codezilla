@@ -63,7 +63,7 @@ const Hero = () => {
       {isVideoLoaded && (
         <video
           ref={videoRef}
-          className="absolute inset-0 w-[140%] h-[140%] object-cover z-0 -scale-x-100 -scale-y-100"
+          className="absolute inset-0 w-[140%] h-[140%] object-cover z-0 -scale-x-100 -scale-y-100 saturate-0"
           style={{ objectPosition: "top right" }}
           autoPlay
           loop
@@ -117,8 +117,8 @@ const Hero = () => {
             <button className="px-6 py-3.5 bg-white rounded-[10px] flex justify-center items-center gap-2 overflow-hidden hover:bg-white/90 transition-colors">
               <span className="text-background text-base font-medium font-['Inter'] leading-7">Book a Free Demo</span>
             </button>
-            <button className="px-6 py-3.5 bg-indigo-950 rounded-[10px] flex justify-center items-center gap-2 overflow-hidden hover:bg-indigo-900 transition-colors">
-              <span className="text-slate-50 text-base font-medium font-['Inter'] leading-7">Get Started Now</span>
+            <button className="px-6 py-3.5 bg-black rounded-[10px] flex justify-center items-center gap-2 overflow-hidden hover:bg-black/80 transition-colors">
+              <span className="text-white text-base font-medium font-['Inter'] leading-7">Get Started Now</span>
             </button>
           </div>
         </div>
