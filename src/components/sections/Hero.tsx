@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Hls from "hls.js";
 
 const VIDEO_URL =
-  "https://customer-cbeadsgr09pnsezs.cloudflarestream.com/be64a67cba95d295d3dde88e803f79f2/manifest/video.m3u8";
+  "https://stream.mux.com/4IMYGcL01xjs7ek5ANO17JC4VQVUTsojZlnw4fXzwSxc.m3u8";
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
