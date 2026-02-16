@@ -8,19 +8,19 @@ const testimonials = [
     quote: "Finally, a way to turn complex workflows into simple, automated solutions that actually improve our productivity.",
     name: "Raj Patel",
     role: "Product Manager at InnovateX",
-    videoUrl: "https://customer-cbeadsgr09pnsezs.cloudflarestream.com/408ad52e3f15bc8f01ae69d194a8cf3a/manifest/video.m3u8",
+    videoUrl: "https://stream.mux.com/8wrHPCX2dC3msyYU9ObwqNdm00u3ViXvOSHUMRYSEe5Q.m3u8",
   },
   {
     quote: "We deliver features faster while keeping quality consistently high, which our clients and team both appreciate.",
     name: "Raj Patel",
     role: "Product Manager at InnovateX",
-    videoUrl: "https://customer-cbeadsgr09pnsezs.cloudflarestream.com/dd17599dfa77f41517133fa7a4967535/manifest/video.m3u8",
+    videoUrl: "https://stream.mux.com/00qQnfNo7sSpn3pB1hYKkyeSDvxs01NxiQ3sr29uL3e028.m3u8",
   },
   {
     quote: "Complex processes that once drained resources now run smoothly, saving us both time and operational costs.",
     name: "Raj Patel",
     role: "Product Manager at InnovateX",
-    videoUrl: "https://customer-cbeadsgr09pnsezs.cloudflarestream.com/df176a2fb2ea2b64bd21ae1c10d3af6a/manifest/video.m3u8",
+    videoUrl: "https://stream.mux.com/Si6ej2ZRrxRCnTYBXSScDRCdd7CGnyTqiPszZcw3z4I.m3u8",
   },
 ];
 
